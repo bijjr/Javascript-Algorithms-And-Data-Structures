@@ -34,3 +34,72 @@ c = c + " String!";
 console.log(a);
 console.log(b);
 console.log(c);
+
+console.log("======================================");
+
+// Understanding Case Sensitivity in Variables
+
+// Declarations
+var studlyCapVar;
+var properCamelCase;
+var titleCaseOver;
+
+// Assignments
+studlyCapVar = 10;
+properCamelCase = "A String";
+titleCaseOver = 9000;
+
+console.log("======================================");
+
+// Incrementing/Decrement a Number with JavaScript
+
+var ranNum = 5;
+
+var printNum = ranNum--;
+
+console.log(printNum);
+
+var incNum = 6;
+
+var subNum = incNum++
+
+console.log(subNum);
+
+
+console.log("======================================");
+
+//
+
+
+var raider  = "123456789"
+
+for (var i = 0; i < raider.length; i++) {
+  raider[i]
+}
+
+console.log(i);
+console.log(raider.length);
+
+console.log("======================================");
+
+// Multiplying floating numbers
+
+var product = 2.0 * 2.5;
+
+console.log(
+    product
+);
+
+console.log("======================================");
+
+//Finding a Remainder in JavaScript
+
+var remainder;
+
+remainder = 11 % 3;
+
+console.log(remainder);
+
+console.log("======================================");
+
+console.log("======================================");
