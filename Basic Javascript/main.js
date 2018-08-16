@@ -103,3 +103,42 @@ console.log(remainder);
 console.log("======================================");
 
 console.log("======================================");
+
+
+var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
+
+
+
+console.log("======================================");
+
+
+// Example
+var firstName = "Ada";
+var lastLetterOfFirstName = firstName[firstName.length - 1];
+console.log(lastLetterOfFirstName);
+console.log("next");
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line.
+var lastLetterOfLastName = lastName[lastName.length - 1];
+
+console.log(lastLetterOfLastName);
+
+
+
+console.log("======================================");
+
+
+
+// Example
+var firstName = "Ada";
+var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line
+var secondToLastLetterOfLastName = lastName[lastName.length - 2];
+
+console.log(secondToLastLetterOfLastName);
