@@ -142,3 +142,92 @@ var lastName = "Lovelace";
 var secondToLastLetterOfLastName = lastName[lastName.length - 2];
 
 console.log(secondToLastLetterOfLastName);
+
+console.log("======================================");
+console.log("======================================");
+
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  // Your code below this line
+  var result = "the " + myAdjective + myNoun + myVerb + myAdverb;
+
+  // Your code above this line
+  // return result;
+  console.log(result);
+}
+
+// Change the words here to test your function
+wordBlanks("dog ", "big ", "ran ", "quickly");
+
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  // Your code below this line
+  var result = "the " + myAdjective + "scary " + myNoun + "saw us and " + myAdverb + myVerb + "over.";
+
+  // Your code above this line
+  console.log(result);
+}
+
+// Change the words here to test your function
+wordBlanks("cat ", "small ", "crawled ", "slowly ");
+
+console.log(wordBlanks);
+
+// I guess this is the _passing_ solution?
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  // Your code below this line
+  var result = "";
+    result += "The "+myAdjective+" "+myNoun+" "+myAdverb+" "+myVerb+" Over ";
+  // Your code above this line
+  console.log(result);
+  return result;
+}
+
+// Change the words here to test your function
+wordBlanks("dog", "big", "ran", "quickly");
+
+
+// Example
+var ourArray = [["the universe", 42], ["everything", 101010]];
+
+// Only change code below this line.
+var myArray = [["nested array", 1], ["in an array", 221], 11, "hello"];
+
+
+// Example
+var ourArray = [50,60,70];
+var ourData = ourArray[0]; // equals 50
+console.log(ourData);
+// Setup
+var myArray = [50,60,70];
+
+// Only change code below this line.
+var myData = myArray[0];
+console.log(myData);
+
+
+// Example
+var ourArray = [18,64,99];
+ourArray[1] = 45; // ourArray now equals [18,45,99].
+
+// Setup
+var myArray = [18,64,99];
+myArray[0] = 45;
+
+var lastone = myArray[myArray.length-1];
+console.log(myArray[0]);
+console.log(lastone);
+// Only change code below this line.
+
+
+
+// Example
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.push(["happy", "joy"]);
+// ourArray now equals ["Stimpson", "J", "cat", ["happy", "joy"]]
+
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line.
+myArray.push(["dog", 3]);
