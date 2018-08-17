@@ -231,3 +231,171 @@ var myArray = [["John", 23], ["cat", 2]];
 
 // Only change code below this line.
 myArray.push(["dog", 3]);
+
+
+// Example
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.pop();
+// removedFromOurArray now equals 3, and ourArray now equals [1,2]
+
+// Setup
+var myArray = [["John", 23], ["cat", 2], 12, "hello"];
+console.log(myArray);
+// Only change code below this line.
+var removedFromMyArray = myArray.pop(myArray[myArray[0]]);
+console.log(myArray);
+
+
+// Example
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift(); // ourArray now equals ["J", "cat"]
+ourArray.unshift("Happy");
+// ourArray now equals ["Happy", "J", "cat"]
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift([]);
+
+// Only change code below this line.
+myArray.unshift(["Paul", 35]);
+
+
+
+
+
+
+var myList = [];
+
+myList.unshift(["Shirt", 10],
+["Pants",20],
+["Shoes",30],
+["Coat",40],
+["Rings",50],
+["Glasses",60]);
+
+// var items = [["Shirt", 10],
+// ["Pants",20],
+// ["Shoes",30],
+// ["Coat",40],
+// ["Rings",50],
+// ["Glasses",60]]
+//
+// myList += items;
+
+console.log(myList);
+
+
+// Example
+function ourReusableFunction(variable) {
+  console.log(variable);
+}
+
+var myWords = "Heyyyya, World";
+
+ourReusableFunction(myWords);
+
+// Only change code below this line
+
+
+// Example
+function ourReusableFunction(myWords) {
+  console.log(myWords);
+}
+
+var myWords = "Heyyyya, World";
+
+ourReusableFunction(myWords);
+
+// Only change code below this line
+function reusableFunction() {
+    console.log("Hi World");
+}
+
+reusableFunction();
+
+
+
+// Example
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+ourFunctionWithArgs(10, 5); // Outputs 5
+
+// Only change code below this line.
+
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
+
+functionWithArgs(1000, 17);
+
+
+function myLocalScope() {
+  'use strict'; // you shouldn't need to edit this line
+  var myVar = "Hello";
+  console.log(myVar);
+}
+myLocalScope();
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+// console.log(myVar);
+
+// Now remove the console log line to pass the test
+
+
+// // Declare your variable here
+// var myGlobal = 10
+//
+// function fun1() {
+//   // Assign 5 to oopsGlobal Here
+//   var oopsGlobal = 5
+// }
+//
+// // Only change code above this line
+// function fun2() {
+//   var output = "";
+//   if (typeof myGlobal != "undefined") {
+//     output += "myGlobal: " + myGlobal;
+//   }
+//   if (typeof oopsGlobal != "undefined") {
+//     output += " oopsGlobal: " + oopsGlobal;
+//   }
+//   console.log(output);
+// }
+//
+// fun1()
+// fun2()
+
+
+function testFunction() {
+  myVar = "test";
+}
+
+function myLocalScope(a) {
+  'use strict'; // you shouldn't need to edit this line
+  var myVar = "test1";
+  console.log(myVar);
+  console.log(myVar + a);
+}
+myLocalScope(1);
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+// console.log(myVar);
+
+// Now remove the console log line to pass the test
+
+
+// Example
+function minusSeven(num) {
+  return num - 7;
+}
+
+// Only change code below this line
+function timesFive (num) {
+  return num * 5;
+}
+
+console.log(minusSeven(10));
+console.log(timesFive(33));
