@@ -399,3 +399,20 @@ function timesFive (num) {
 
 console.log(minusSeven(10));
 console.log(timesFive(33));
+
+
+// Example
+var sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+
+// Only change code below this line
+function addFive() {
+  sum += 5;
+  return sum
+}
+
+// Only change code above this line
+var returnedValue = addFive();
+console.log(addFive());
