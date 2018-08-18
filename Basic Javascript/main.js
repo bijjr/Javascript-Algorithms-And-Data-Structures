@@ -467,3 +467,398 @@ console.log("After: " + JSON.stringify(testArr));
 
 console.log("======================================");
 console.log("======================================");
+
+///Write an if statement inside the function to return "Yes, that was true" if the parameter wasThatTrue is true and return "No, that was false" otherwise.
+
+// Example
+function ourTrueOrFalse(isItTrue) {
+  if (isItTrue) {
+    return "Yes, it's true";
+  }
+  return "No, it's false";
+}
+
+// Setup
+function trueOrFalse(wasThatTrue) {
+
+  // Only change code below this line.
+      if (wasThatTrue) {
+          return "Yes, that was true";
+      }
+      return "No, that was false";
+
+  // Only change code above this line.
+
+}
+
+// Change this value to test
+console.log(trueOrFalse(true));
+
+console.log("======================================");
+console.log("======================================");
+
+// Setup
+function testEqual(val) {
+  if (val == 10) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+// Change this value to test
+console.log(testEqual(10))
+
+console.log("======================================");
+console.log("======================================");
+
+function testGreaterOrEqual(val) {
+  if (val >= 20) {  // Change this line
+    return "20 or Over";
+  }
+
+  if (val >= 10) {  // Change this line
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+// Change this value to test
+console.log(testGreaterOrEqual(10));
+
+console.log("======================================");
+console.log("======================================");
+
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val <= 50 && val >= 25) {
+      return "Yes";
+  }
+
+  // Only change code above this line
+  return "No";
+}
+
+// Change this value to test
+testLogicalAnd(10);
+
+console.log("======================================");
+console.log("======================================");
+
+function testLogicalOr(val) {
+  // Only change code below this line
+
+  if (val < 10 || val > 20) {
+    return "Outside";
+  }
+
+  // Only change code above this line
+  return "Inside"
+}
+// Change this value to test
+console.log(testLogicalOr(15));
+console.log(testLogicalOr(20));
+console.log(testLogicalOr(10));
+console.log(testLogicalOr(153));
+
+
+console.log("======================================");
+console.log("======================================");
+
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+  // Only change code below this line
+  var score = par - strokes;
+  if (strokes == 1) {
+    return names[0];
+  }
+  else if (strokes <= 2) {
+    return names[1];
+  }
+  else if (score == 1 ) {
+    return names[2];
+  }
+  else if (score == 0) {
+    return names[3];
+  }
+  else if (score == -1) {
+    return names[4];
+  }
+  else if (score == -2) {
+    return names[5];
+  }
+  else if (score <= -3) {
+    return names[6];
+  }
+  // Only change code above this line
+}
+
+// Change these values to test
+console.log(golfScore(5, 4));
+console.log(golfScore(4, 4));
+console.log(golfScore(2, 4));
+console.log(golfScore(5, 1));
+console.log(golfScore(5, 43));
+
+console.log("======================================");
+console.log("======================================");
+
+function caseInSwitch(val) {
+  var answer = "";
+  // Only change code below this line
+  switch(val) {
+     case 1:
+      answer += "alpha";
+    break;
+    case 2:
+      answer += "beta";
+    break;
+    case 3:
+      answer += "gamma";
+    break;
+    case 4:
+      answer += "delta";
+    break;
+  }
+
+
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+caseInSwitch(1);
+
+// Change this value to test
+console.log(caseInSwitch(1));
+console.log(caseInSwitch(2));
+console.log(caseInSwitch(3));
+console.log(caseInSwitch(4));
+
+
+
+
+console.log("======================================");
+console.log("======================================");
+
+function switchOfStuff(val) {
+  var answer = "";
+  // Only change code below this line
+switch (val) {
+  case "a":
+    answer += "apple";
+    return answer
+    break;
+  case "b":
+    answer += "bird";
+    return answer
+    break;
+  case "c":
+    answer += "cat"
+    return answer
+    break;
+  default:
+    answer += "stuff";
+    return answer
+    break;
+  // Only change code above this line
+  return answer;
+  }
+}
+
+// Change this value to test
+console.log(switchOfStuff(1));
+console.log(switchOfStuff("a"));
+
+
+
+
+console.log("======================================");
+console.log("======================================");
+
+
+function sequentialSizes(val) {
+  var answer = "";
+  // Only change code below this line
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer += "Low"
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer += "Mid"
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer += "High"
+      break;
+  }
+
+
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+console.log(sequentialSizes(1));
+console.log(sequentialSizes(5));
+console.log(sequentialSizes(9));
+
+
+console.log("======================================");
+console.log("======================================");
+
+function chainToSwitch(val) {
+  var answer = "";
+  // Only change code below this line
+
+  // if (val === "bob") {
+  //   answer = "Marley";
+  // } else if (val === 42) {
+  //   answer = "The Answer";
+  // } else if (val === 1) {
+  //   answer = "There is no #1";
+  // } else if (val === 99) {
+  //   answer = "Missed me by this much!";
+  // } else if (val === 7) {
+  //   answer = "Ate Nine";
+  // }
+
+  switch(val) {
+    case "bob":
+      answer = "Marley";
+      break;
+    case 42:
+      answer = "The Answer";
+      break;
+    case 1:
+      answer = "There is no #1";
+      break;
+    case 99:
+      answer = "Missed me by this much!";
+      break;
+    case 7:
+      answer = "Ate Nine";
+      break;
+  }
+
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+console.log(chainToSwitch(7));
+
+
+console.log("======================================");
+console.log("======================================");
+
+// Setup
+function abTest(a, b) {
+  // Only change code below this line
+  if (a < 0 || b < 0) {
+    return;
+  }
+
+
+  // Only change code above this line
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+// Change values below to test your code
+abTest(2,2);
+
+console.log("======================================");
+console.log("======================================");
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch (card) {
+    case 2:
+      break;
+    case 3:
+      break;
+    case 4:
+      break;
+    case 5:
+      break;
+    case 6:
+      count += 1;
+      break;
+    case 7:
+      break;
+    case 8:
+      break;
+    case 9:
+      count += 0;
+      break;
+    case 10:
+      break;
+    case 'J':
+      break;
+    case 'Q':
+      break;
+    case 'K':
+      break;
+    case 'A':
+      count -= 1;
+      break;
+  }
+
+  var betHold = ''
+
+  if (count < 0) {
+      betHold = ' Bet';
+  }
+  else {
+     betHold = ' Hold';
+  }
+
+  return count + betHold;
+  // Only change code above this line
+}
+
+// Add/remove calls to test your function.
+// Note: Only the last will display
+// cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+// console.log(cc('A'));
+// console.log(cc('K'));
+// console.log(cc(7));
+console.log(cc(3));
+// console.log(cc(2));
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
+
+console.log("======================================");
+console.log("======================================");
