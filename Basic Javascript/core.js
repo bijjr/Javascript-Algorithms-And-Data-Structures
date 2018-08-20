@@ -227,7 +227,7 @@ console.log(updateRecords(1245, "album", "Riptide"));
 // console.log(myArray);
 
 
-var myArray = []
+// var myArray = []
 
 // for (var i = 1; i <= 9; i+=2) {
 //   myArray.push(i);
@@ -240,3 +240,23 @@ var myArray = []
 // }
 // console.log(i);
 // console.log(myArray);
+
+// Iterate Through an Array with a For Loop
+
+// Setup
+var myArr = [ 2, 3, 4, 5, 6];
+var total = 0;
+// Only change code below this line
+
+
+// initializes variable i to zero
+// while i is less than the length of the array we're iterating over the function will run
+//finally i increases by on each iteration
+for (var i = 0; i < myArr.length; i++) {
+  // we're adding the sum of each index in the array and assigning it to the total variable.
+  //myArr[3] = 5 + myArr[4] = 6, etc
+  total += myArr[i];
+  console.log(myArr[i]);
+}
+
+console.log(total);
