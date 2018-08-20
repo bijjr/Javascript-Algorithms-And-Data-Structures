@@ -229,8 +229,14 @@ console.log(updateRecords(1245, "album", "Riptide"));
 
 var myArray = []
 
-for (var i = 1; i <= 9; i+=2) {
-  myArray.push(i);
-}
+// for (var i = 1; i <= 9; i+=2) {
+//   myArray.push(i);
+// }
 
-console.log(myArray);
+
+// Count Backwards With a For Loop
+// for (var i = 9; i > 0; i-=2) {
+//   myArray.push(i);
+// }
+// console.log(i);
+// console.log(myArray);
