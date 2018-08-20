@@ -260,3 +260,29 @@ for (var i = 0; i < myArr.length; i++) {
 }
 
 console.log(total);
+
+//Nesting For Loops
+
+//Modify the function multiplyAll so that it multiplies the product variable by each number in the sub-arrays of arr
+
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  // iterates over length of indexes in parameter array 'arr' adds 1 each time --
+  for (var i = 0; i < arr.length; i++) {
+    // for every index in param arr another for loop iterates over the indexes in param arr because the index itself is an array - this loop ends when the 
+    for (var j = 0; j < arr[i].length; j++) {
+      // the product variable is multiplied by the index of the array within the array.
+      // arr[1] = [3,4]
+      // arr[1][1] = '4'
+      product *= arr[i][j];
+      console.log(product);
+    }
+  }
+  // Only change code above this line
+  console.log(product);
+  // return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
