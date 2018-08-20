@@ -98,7 +98,7 @@ function checkObj(checkProp) {
 }
 
 // Test your code by modifying these values
-console.log(checkObj("gift"));
+// console.log(checkObj("gift"));
 
 
 var myMusic = [
@@ -177,28 +177,60 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
-  // id = collectionCopy.[id]
-  // prop = collectionCopy.[prop]
-  // value = collectionCopy.[value]
 
-  if (prop != "tracks" && value != "") {
-    collectionCopy[prop] = value;
-    collectionCopy.id = id;
-    console.log(collectionCopy.artist);
-    console.log(collectionCopy.id);
-    // console.log(collectionCopy);
+    if (prop == "tracks" && value != '') {
+    if (collection[id][prop]) {
+      collection[id][prop].push(value);
+    }
+    else {
+      collection[id][prop] = value;
+    }
   }
-
-  if (prop == "tracks" && collection.hasOwnProperty(prop) == false) {
-    collection[prop] = [];
-    collection[prop].push(value);
-    console.log(collection.tracks);
+  else if (prop !== 'tracks' && value !== '') {
+    collection[id][prop] = value;
   }
-
-
-  return collection;
+    else {
+      delete collection[id][prop];
+    }
+    return collection
 }
+
+//why does the tect pass when using [value] on line 40 but not on value in line 44 and vice versa?
+//is it because you're adding a value to a key value property on line 44 and you're adding an array indec on line 40?
 
 // Alter values below to test your code
 updateRecords(5439, "artist", "ABBA");
-updateRecords(5439, "tracks", "Take a Chance on Me")
+updateRecords(5439, "tracks", "Take a Chance on Me");
+updateRecords(2548, "artist", "");
+console.log(updateRecords(1245, "tracks", "Addicted to Love"));
+updateRecords(2468, "tracks", "Free");
+updateRecords(2548, "tracks", "");
+console.log(updateRecords(1245, "album", "Riptide"));
+
+//
+// // Example
+// var ourArray = [];
+//
+// for (var i = 0; i < 5; i++) {
+//   ourArray.push(i);
+// }
+//
+// // Setup
+// var myArray = [];
+//
+// // Only change code below this line.
+//
+// for (var i = 1; i < 6; i++) {
+//     myArray.push(i);
+// }
+//
+// console.log(myArray);
+
+
+var myArray = []
+
+for (var i = 1; i <= 9; i+=2) {
+  myArray.push(i);
+}
+
+console.log(myArray);
