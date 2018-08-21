@@ -270,19 +270,102 @@ function multiplyAll(arr) {
   // Only change code below this line
   // iterates over length of indexes in parameter array 'arr' adds 1 each time --
   for (var i = 0; i < arr.length; i++) {
-    // for every index in param arr another for loop iterates over the indexes in param arr because the index itself is an array - this loop ends when the 
+    // for every index in param arr another for loop iterates over the indexes in param arr because the index itself is an array - this loop ends when the
     for (var j = 0; j < arr[i].length; j++) {
       // the product variable is multiplied by the index of the array within the array.
       // arr[1] = [3,4]
       // arr[1][1] = '4'
       product *= arr[i][j];
-      console.log(product);
+      // console.log(product);
     }
   }
   // Only change code above this line
-  console.log(product);
+  // console.log(product);
   // return product;
 }
 
 // Modify values below to test your code
 multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+
+// Iterate with JavaScript Do...While Loops
+
+// Setup
+var myArray = [];
+var i = 10;
+
+// Only change code below this line.
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
+
+
+//Basic JavaScript: Object Profile Lookup
+
+//Setup
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+
+
+function lookUpProfile(name, prop){
+
+  for (var i = 0; i < contacts.length; i++) {
+    if (name === contacts[i]['firstName']) {
+      if (contacts[i][prop]) {
+        console.log(contacts[i][prop]);
+        return contacts[i][prop];
+      }
+      else {
+        console.log("No such property");
+        return "No such property"
+        }
+      }
+    }
+        console.log("No such Contact");
+        return "No such contact"
+    }
+
+
+// Change these values to test your function
+lookUpProfile("Kristian", "lastName");
+console.log('Should print "Vos" ');
+
+lookUpProfile("Sherlock", "likes");
+console.log('Should print "[Intriguing Cases, Violin]" ');
+
+lookUpProfile("Harry","likes");
+console.log('Should print an array ');
+
+lookUpProfile("Bob","number");
+console.log('Should print "No such contact" ');
+
+lookUpProfile("Bob","potato");
+console.log('Should print "No such Contact" ');
+
+lookUpProfile("Akira","address");
+console.log('Should print "No such property" ');
