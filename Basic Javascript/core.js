@@ -401,3 +401,43 @@ function randomRange(myMin, myMax) {
 
 // Change these values to test your function
 var myRandom = randomRange(5, 15);
+
+
+// Use the parseInt Function
+
+// function convertToInteger(str) {
+//   console.log(parseInt(str));
+//   return parseInt(str);
+// }
+//
+// convertToInteger("56");
+
+
+function convertToInteger(str) {
+  return parseInt(str,2);
+}
+
+console.log(convertToInteger("10011"));
+
+
+// Conditional (Ternary) Operator
+
+function checkEqual(a, b) {
+  return a == b ? true : false;
+}
+
+console.log(checkEqual(1, 2));
+console.log(checkEqual(1, -1));
+console.log(checkEqual(1, 1));
+console.log(checkEqual(1, 3));
+console.log(checkEqual(2, 2));
+
+// Multiple Conditional (Ternary) Operators
+
+function checkSign(num) {
+    return (num >= 1) ? "positive": (num < 0) ? "negative" : "zero";
+}
+
+console.log(checkSign(10));
+console.log(checkSign(-10));
+console.log(checkSign(0));
