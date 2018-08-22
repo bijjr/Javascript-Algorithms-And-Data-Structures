@@ -352,20 +352,31 @@ function lookUpProfile(name, prop){
 
 
 // Change these values to test your function
-lookUpProfile("Kristian", "lastName");
-console.log('Should print "Vos" ');
+// lookUpProfile("Kristian", "lastName");
+// console.log('Should print "Vos" ');
+//
+// lookUpProfile("Sherlock", "likes");
+// console.log('Should print "[Intriguing Cases, Violin]" ');
+//
+// lookUpProfile("Harry","likes");
+// console.log('Should print an array ');
+//
+// lookUpProfile("Bob","number");
+// console.log('Should print "No such contact" ');
+//
+// lookUpProfile("Bob","potato");
+// console.log('Should print "No such Contact" ');
+//
+// lookUpProfile("Akira","address");
+// console.log('Should print "No such property" ');
 
-lookUpProfile("Sherlock", "likes");
-console.log('Should print "[Intriguing Cases, Violin]" ');
+//Generate Random Whole Numbers with JavaScript
 
-lookUpProfile("Harry","likes");
-console.log('Should print an array ');
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
 
-lookUpProfile("Bob","number");
-console.log('Should print "No such contact" ');
+function randomWholeNum() {
 
-lookUpProfile("Bob","potato");
-console.log('Should print "No such Contact" ');
+  // Only change code below this line.
 
-lookUpProfile("Akira","address");
-console.log('Should print "No such property" ');
+  return Math.floor(Math.random(9));
+}
