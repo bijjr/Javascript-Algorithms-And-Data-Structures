@@ -48,3 +48,51 @@ function editInPlace() {
   console.log(s);
 }
 editInPlace();
+
+//Prevent Object Mutation
+
+function freezeObj() {
+     "use strict";
+     const MATH_CONSTANTS = {
+       PI: 3.14
+     };
+
+     // Object.freeze(MATH_CONSTANTS);
+
+     try {
+       MATH_CONSTANTS.PI = 99;
+     } catch( ex ) {
+       console.log(ex);
+     }
+     return MATH_CONSTANTS.PI;
+   }
+
+   const PI = freezeObj();
+
+// Use Arrow Functions to Write Concise Anonymous Functions
+
+const magic = () => {return new Date();}
+
+
+//Arrow Functions with Parameters
+
+const myConcat = (arr1, arr2) => {return arr1.concat(arr2);}
+
+console.log(myConcat([1,2],[3,4,5]));
+
+// Write Higher Order Arrow Functions
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34];
+const squareList = (arr) => {
+  "use strict";
+  // change code below this line
+  // const squaredIntegers = arr.filter(value => % 2 === 0)
+  const squaredIntegers = arr
+  .map(value => value ** 2)
+  .filter(value => value > 0 && value % 2 === 0)
+  // change code above this line
+  return squaredIntegers;
+};
+// test your code
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
