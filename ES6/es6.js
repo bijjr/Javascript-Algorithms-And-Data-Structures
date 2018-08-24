@@ -30,14 +30,21 @@ checkScope();
 function printManyTimes(str) {
   "use strict";
 
-  // change code below this line
-
   const SENTENCE = str + " is cool!";
   for(let i = 0; i < str.length; i+=2) {
     console.log(SENTENCE);
   }
 
-  // change code above this line
-
 }
 printManyTimes("freeCodeCamp");
+
+
+//Mutate an Array Declared with const
+
+const s = [5, 7, 2];
+function editInPlace() {
+  "use strict";
+  s.unshift(s.pop());
+  console.log(s);
+}
+editInPlace();
