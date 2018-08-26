@@ -112,3 +112,30 @@ const increment = (number, value = 1) => {
 };
 console.log(increment(5, 2)); // returns 7
 console.log(increment(5)); // returns NaN
+
+//Use the Rest Operator with Function Parameters
+//
+// const sum = (x, y, z) => {
+//     const args = [ x, y, z ];
+//     return args.reduce((a, b) => a + b, 0);
+//   };
+//
+// console.log(sum(1, 2, 4)); // 6
+
+// Spread & Rest Operator with Function Parameters
+
+const sum = (...args) => {
+    // const args = [ x, y, z ];
+    return args.reduce((a, b) => a + b, 0);
+  };
+console.log(sum(1, 2, 3)); // 6
+
+const sum = ();
+
+
+// function littleDog(sum) {
+//   return sum + 1;
+// }
+//
+//
+// console.log(littleDog(1));
