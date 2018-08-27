@@ -130,7 +130,7 @@ const sum = (...args) => {
   };
 console.log(sum(1, 2, 3)); // 6
 
-const sum = ();
+// const sum = ();
 
 
 // function littleDog(sum) {
@@ -139,3 +139,14 @@ const sum = ();
 //
 //
 // console.log(littleDog(1));
+
+
+//Spread Operators
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function() {
+  "use strict";
+  arr2 = [...arr1]; // change this line
+})();
+console.log(arr2);
