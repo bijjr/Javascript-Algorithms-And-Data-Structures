@@ -150,3 +150,19 @@ let arr2;
   arr2 = [...arr1]; // change this line
 })();
 console.log(arr2);
+
+
+//Destructuring Assignment to Assign Variables from Objects
+
+function getLength(str) {
+  "use strict";
+
+  // change code below this line
+  const {length : nope} = str; // change this
+  // change code above this line
+
+  return nope; // you must assign length to len in line
+
+}
+
+console.log(getLength('FreeCodeCamp'));
