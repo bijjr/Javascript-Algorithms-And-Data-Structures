@@ -166,3 +166,182 @@ function getLength(str) {
 }
 
 console.log(getLength('FreeCodeCamp'));
+
+
+//Use Destructuring Assignment to Assign Variables from Nested Objects
+
+//Use destructuring assignment to obtain max of forecast.tomorrow and assign it to maxOfTomorrow.
+
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 }
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+  // change code below this line
+  const {tomorrow : {max: maxOfTomorrow}} = forecast; // change this line
+  // change code above this line
+  return maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
+
+//Topic
+//Use Destructuring Assignment to Assign Variables from Arrays
+
+//Prompt
+//Use destructuring assignment to swap the values of a and b so that a receives the value stored in b, and b receives the value stored in a.
+
+let a = 8, b = 6;
+(() => {
+  "use strict";
+  //Assigns variable a to variable b and b to a
+  [a,b] = [b,a]
+
+})();
+console.log(a); // should be 6
+console.log(b); // should be 8
+
+//Topic
+//Use Destructuring Assignment with the Rest Operator to Reassign Array Elements
+
+//Prompt
+//Use destructuring assignment with the rest operator to perform an effective Array.prototype.slice() so that arr is a sub-array of the original array source with the first two elements omitted.
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  "use strict";
+  // What's happening here?
+  // [...list] is the rest operator of all the elements in the list arrays
+  // ([1-10])
+  // const arr is a sub array  of the array passed in (list/source) with the first two indexes removed ("a,b,")
+  const [a,b,...arr] = [...list]; // change this
+  return arr;
+}
+//
+const arr = removeFirstTwo(source);
+console.log(arr); // should be [3,4,5,6,7,8,9,10]
+console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
+
+
+//Topic
+//Use Destructuring Assignment to Pass an Object as a Function's Parameters
+
+//Prompt
+//Use destructuring assignment within the argument to the function half to send only max and min inside the function
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+const half = (function() {
+  "use strict";
+
+// half function takes the max and min properties of an object passed in (stats) as arguments
+  return function half({max, min}) {
+
+    return (max + min) / 2.0;
+  };
+
+})();
+console.log(stats); // should be object
+console.log(half(stats)); // should be 28.015
+
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
+
+//Topic
+//Prompt
