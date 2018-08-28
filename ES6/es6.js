@@ -325,10 +325,58 @@ bicycle.setGear(3);
 console.log(bicycle.gear);
 
 //Topic
+// Use class Syntax to Define a Constructor Function
+
 //Prompt
+// Use class keyword and write a proper constructor to create the Vegetable class.
+
+// The Vegetable lets you create a vegetable object, with a property name, to be passed to constructor
+
+function makeClass() {
+  "use strict";
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+      }
+    }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // => should be 'carrot'
+
 
 //Topic
+//Use getters and setters to Control Access to an Object
+
 //Prompt
+//Use class keyword to create a Thermostat class. The constructor accepts Fahrenheit temperature.
+//Now create getter and setter in the class, to obtain the temperature in Celsius scale.
+
+function makeClass() {
+  "use strict";
+  class Thermostat {
+    constructor(temperature) {
+      this._temperature = temperature;
+    }
+    get temperature() {
+      this._temperature = (5/9 * (this._temperature - 32));
+    }
+    set temperature(celsius) {
+      this._temperature = (celsius * 9.0 / 5 + 32);
+    }
+  }
+  return Thermostat;
+}
+const Thermostat = makeClass();
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+console.log(thermos);
+console.log(thermos._temperature);
+
+let temp = thermos._temperature; // 24.44 in C
+thermos._temperature = 26;
+temp = thermos._temperature; // 26 in C
+console.log(temp);
 
 //Topic
 //Prompt
