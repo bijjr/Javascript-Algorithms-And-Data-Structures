@@ -306,7 +306,23 @@ const createPerson = (name, age, gender) => {
 console.log(createPerson("Zodiac Hasbro", 56, "male")); // returns a proper object
 
 //Topic
+//Declarative Functions with ES6
+
 //Prompt
+//Refactor the function setGear inside the object bicycle to use the shorthand syntax described above.
+
+
+// change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  }
+};
+// change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
 
 //Topic
 //Prompt
