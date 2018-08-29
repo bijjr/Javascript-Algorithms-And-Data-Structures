@@ -359,10 +359,10 @@ function makeClass() {
     constructor(temperature) {
       this._temperature = temperature;
     }
-    get temperature() {
-      this._temperature = (5/9 * (this._temperature - 32));
+    getTemperature() {
+      return (5/9 * (this._temperature - 32));
     }
-    set temperature(celsius) {
+    setTemperature(celsius) {
       this._temperature = (celsius * 9.0 / 5 + 32);
     }
   }
@@ -377,12 +377,31 @@ let temp = thermos._temperature; // 24.44 in C
 thermos._temperature = 26;
 temp = thermos._temperature; // 26 in C
 console.log(temp);
+console.log('============');
 
 //Topic
+//Understand the Differences Between import and require
 //Prompt
+//Add the appropriate import statement that will allow the current file to use the capitalizeString function. The file where this function lives is called "string_functions", and it is in the same directory as the current file.
+
+// import { capitalizeString } from "string_functions"
+// "use strict";
+// capitalizeString("hello!");
+
 
 //Topic
+// export a code block
 //Prompt
+// export both variables.
+
+
+"use strict";
+export const foo = "bar";
+export const bar = "foo";
+
+// export { foo, bar }
+
+console.log('============');
 
 //Topic
 //Prompt
