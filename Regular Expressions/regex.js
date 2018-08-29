@@ -18,7 +18,7 @@ console.log(myRegexes.test(myStrings));
 console.log('============');
 
 //Topic
-//Match literal string with diff possibilities 
+//Match literal string with diff possibilities
 // Prompt
 // Match regex to multiple patterns using OR Operators
 
@@ -30,44 +30,85 @@ console.log(resultOne);
 console.log('============');
 
 //Topic
-//
+// Ignore Case While Matching
 //Prompt
-//
+//Write a regex fccRegex to match "freeCodeCamp", no matter its case.
 
+let myStringss = "freeCodeCamp";
+let fccRegex = /freecodecamp/i; // Change this line
+let resultTwo = fccRegex.test(myStringss);
+console.log(resultTwo);
+console.log('============');
 
-// console.log('============');
+//Topic
+//Regex: Extract Matches
+//Prompt
+//extract the word coding
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/;
+let resultThree = extractStr.match(codingRegex);
+
+console.log(resultThree);
+console.log('============');
+
+//Topic
+// Finding repeat matches
+//Prompt
+// extract all appearances of twinkle
+
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/ig;
+let resultFour = twinkleStar.match(starRegex);
+console.log(resultFour);
+console.log('============');
 
 //Topic
 //
 //Prompt
 //
 
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+
+// match with any strings that have "g,o" pattern - * asterik is applied to "o" which means "o" can appear zero times and the query will still return a match, but "g" must be present
+let goRegex = /go*/;
+
+// matches 1 pattern of "g,o"
+soccerWord.match(goRegex); // Returns ["goooooooo"]
+// matches 1 pattern of "g"
+gPhrase.match(goRegex); // Returns ["g"]
+// finds 0 matches, because there is no g present
+oPhrase.match(goRegex); // Returns null
 
 // console.log('============');
 
 //Topic
-//
+//Restrict Possible Usernames
+
 //Prompt
-//
+//1) The only numbers in the username have to be at the end. There can be zero or more of them at the end.
+
+// 2) Username letters can be lowercase and uppercase.
+
+// 3) Usernames have to be at least two characters long. A two-letter username can only use alphabet letter characters.
 
 
-// console.log('============');
+let username = "JackOfAllTrades";
 
-//Topic
-//
-//Prompt
-//
+//What the hell is going on here?
+// 1) ^[a-z] Requires the first character to be a letter
+// 2) [a-z]+ requires the second character to be a letter of one or more (meeting the "usernames have to be at least two characters long" rule)
+// 3) \d*$ if there is a number (* = 0 or more) it must be the last character ($)
+let userCheck = /^[a-z][a-z]+\d*$/i;
 
+//optimized, clever solution I didn't think of {2,}????
+// let userCheck = /^[a-z]{2,}[\d]*$/i;
+let name = userCheck.test(username);
 
-// console.log('============');
-
-//Topic
-//
-//Prompt
-//
-
-
-// console.log('============');
+console.log(name);
+console.log('============');
 
 //Topic
 //
