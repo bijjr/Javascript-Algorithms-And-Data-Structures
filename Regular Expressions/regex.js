@@ -109,11 +109,16 @@ let name = userCheck.test(username);
 
 console.log(name);
 console.log('============');
+console.log('============');
 
 //Topic
-//
+//Positive and Negative Lookahead
 //Prompt
-//
+//Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long and have two consecutive digits.
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5,})(?=.*\d{2})/; // Change this line
+let passwordss = pwRegex.test(sampleWord);
 
 
 // console.log('============');
