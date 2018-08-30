@@ -121,14 +121,23 @@ let pwRegex = /(?=\w{5,})(?=.*\d{2})/; // Change this line
 let passwordss = pwRegex.test(sampleWord);
 
 
-// console.log('============');
+console.log('============');
+
+//Topic
 //
-// //Topic
-// //
-// //Prompt
-// //
+//Prompt
 //
-//
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s*|\s*$/g;
+let resulted = hello.replace(wsRegex, "");
+
+let resulting = resulted
+let whiteSP = /\s/g;
+let tryHarder = resulted.replace(whiteSP, "x")
+
+console.log(resulted);
+console.log(tryHarder);
 // console.log('============');
 //
 // //Topic
