@@ -129,7 +129,7 @@ console.log('============');
 //
 
 let hello = "   Hello, World!  ";
-let wsRegex = /^\s*|\s*$/g;
+let wsRegex = /^\s+|\s+$/g;
 let resulted = hello.replace(wsRegex, "");
 
 let resulting = resulted
