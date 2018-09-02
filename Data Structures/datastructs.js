@@ -99,27 +99,80 @@ console.log('=====================================');
 
 // We have defined a function, filteredArray, which takes arr, a nested array, and elem as arguments, and returns a new array. elem represents an element that may or may not be present on one or more of the arrays nested within arr. Modify the function, using a for loop, to return a filtered version of the passed array such that any array nested within arr containing elem has been removed.
 
+
+// intitial solution
 function filteredArray(arr, elem) {
   let newArr = [];
 
   for (let i = 0; i < arr.length; i++) {
     let nested = arr[i];
-    
-    for (let j = 0; j < nested.length; j++) {
-      (nested[j] == elem) ? nested.splice(0, nested.length) : false ;
-      }
+
+    for (var j = 0; j < nested.length; j++) {
+      (nested[j] == elem) ? nested.splice(0, nested.length) : false;
     }
-  for (let z = 0; z < arr.length; z++) {
-      (arr[z].length > 0) ? newArr.push(arr[z]) : false ;
-    }
-  return newArr;
+    (nested.length > 0) ? newArr.push(nested) : false;
   }
+return newArr;
+}
+
+
+//better solution utilizing the .indexOf method
+  // function filteredArray(arr, elem) {
+  //   let newArr = [];
+  //
+  //   for( var i = 0 ; i<arr.length ; i++){
+  //     //if the current nested array does not have "=== -1" add that sub-array to newArr
+  //     (arr[i].indexOf(elem) === -1) ? newArr.push(arr[i]) : false;
+  //   }
+  //   return newArr;
+  // }
 
 // change code here to test different cases:
 console.log(filteredArray([[3, 2, 3, 6], [1, 6, 3], [3, 4, 13, 26], [6, 19, 3, 9]], 3));
 console.log(filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18));
 
 ////
+
+//Create complex multi-dimensional arrays
+
+let myNestedArray = [
+  // change code below this line
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+  [
+    ['deep']
+  ],
+  ['loop', 'shift', 6, 7, 1000, 'method'],
+  [
+    [
+      [4,'layers', 'deeper']
+    ],
+  ],
+
+  ['concat', false, true, 'spread', 'array'],
+  ['mutate', 1327.98, 'splice', 'slice', 'push'],
+  [
+    [
+      [
+        ['deepest','of', 'layer', 5]
+      ],
+    ],
+  ],
+  ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+  // change code above this line
+];
+
+//3rd - deep 4th - deeper 5th - deepest
+
+
+// function dimensions() {
+//   for (let i = 0; i < myNestedArray.length; i++) {
+//     let rows = myNestedArray[i]
+//     let columns = rows.length
+//     console.log(`row ${i} has ${columns} columns`);
+//   }
+// }
+//
+// console.log(dimensions());
 
 ////
 
