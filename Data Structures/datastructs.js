@@ -164,22 +164,80 @@ let myNestedArray = [
 //3rd - deep 4th - deeper 5th - deepest
 
 
-// function dimensions() {
-//   for (let i = 0; i < myNestedArray.length; i++) {
-//     let rows = myNestedArray[i]
-//     let columns = rows.length
-//     console.log(`row ${i} has ${columns} columns`);
+function dimensions() {
+  for (let i = 0; i < myNestedArray.length; i++) {
+    let rows = myNestedArray[i]
+    let columns = rows.length
+    console.log(`row ${i} has ${columns} columns`);
+  }
+}
+
+console.log(dimensions());
+
+////
+
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: true
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: true
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
 //   }
+// };
+
+// function isEveryoneHere(obj) {
+//
+//   return obj.hasOwnProperty('Alan','Jeff','Sarah','Ryan') ? true : false;
+//
 // }
 //
-// console.log(dimensions());
+// console.log(isEveryoneHere(users));
 
 ////
 
 ////
+////
 
-////
-////
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function countOnline(obj) {
+  // change code below this line
+  let active = []
+  for (let user in users) {
+  active = users[user].online ? active.push(user) : false;
+  }
+  return active
+  // change code above this line
+}
+
+console.log(countOnline(users));
 
 ////
 
