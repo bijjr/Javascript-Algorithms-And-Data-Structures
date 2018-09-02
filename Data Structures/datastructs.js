@@ -230,16 +230,18 @@ let users = {
 function countOnline(obj) {
   // change code below this line
   let active = []
-  for (let user in users) {
-  active = users[user].online ? active.push(user) : false;
+  for (let user in obj) {
+  obj[user].online ? active.push(user) : false;
   }
-  return active
+  return active.length
   // change code above this line
 }
 
 console.log(countOnline(users));
 
 ////
+
+
 
 ////
 
