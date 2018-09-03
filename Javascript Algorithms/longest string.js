@@ -35,7 +35,6 @@ console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"
 
 console.log(findLongestWordLengths("The quick brown fox jumped over the lazy dog"));
 
-
 ///
 
 // var array1 = [1, 2, 3, 4, 5, 6, 7 ];
