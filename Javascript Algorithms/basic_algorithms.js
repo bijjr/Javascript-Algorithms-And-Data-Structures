@@ -52,11 +52,73 @@ function reverseString(str) {
 
 console.log('====================');
 
+//Factorialize a Number
+// Return the factorial of a provided integer
+
+function factorialize(num) {
+
+  return num == 0 ?  1 : num * factorialize(num - 1) ;
+}
+
+console.log(factorialize(10));
+
+console.log('====================');
+
+function factorialized(num) {
+  // base case/terminal condition
+  if (num == 0) {
+    return 1;
+  }
+  else {
+    // recursion occurs
+    // 0 = > returns 1
+    // 1 = > 1 * 1
+    // 2 = > 2 * 1 * 1
+    // ...
+    // 10 = > 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 * 1
+    return num * factorialized(num - 1);
+  }
+}
+
+console.log(factorialized(10));
+
+console.log('====================');
+
+function pow(x, n) {
+  //base case returns nested functions starting with pow(2, 1) => 2
+  //pow(2, 2) => 2num * 2 or pow(2,1) = 4
+  //pow(2,3) => 2num * 2 * 2 or pow(2,2) = 8
+  // retu
+  if (n == 1) {
+    return x;
+  } else {
+    // recursion
+    // pow(2,3) = > 2*
+    return x * pow(x, n - 1);
+  }
+}
+
+console.log( pow(2,3));
+
 //
 
-// console.log('====================');
+function sumTo(n) {
+  if (n == 0) {
+    return n
+  }
+  return n + (sumTo(n-1))
+}
+console.log(sumTo(100));
 
-//
+
+function summedup(n) {
+  let sumss = 0
+  for (var i = 0; i <= n; i++) {
+    sumss += i
+  }
+  return sumss
+}
+console.log(summedup(100));
 
 // console.log('====================');
 
