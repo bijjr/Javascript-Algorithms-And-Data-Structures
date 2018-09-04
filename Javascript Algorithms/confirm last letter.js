@@ -2,16 +2,21 @@
 
 
 //initial solution
+// function confirmEnding(str, target) {
+//   let search = str.split('');
+//
+//   for (var words in search) {
+//       let spliced = search
+//       .splice(-target.length)
+//       .join('')
+//
+//       return spliced == target ? true : false;
+//   }
+// }
+
+//substring solution (more optimal)
 function confirmEnding(str, target) {
-  let search = str.split('');
-
-  for (var words in search) {
-      let spliced = search
-      .splice(search.length - target.length)
-      .join('')
-
-      return spliced == target ? true : false;
-  }
+  return (str.substr(-target.length) === target) ? true : false;
 }
 
 // search.length - target.length, search.length - 1 (end of string) == target
