@@ -2,7 +2,7 @@
 
 function truncateString(str, num) {
 
-  return str.length > num ? str.splice(num-1) + '...' : str;
+  return str.length > num ? str.slice(0,num) + '...' : str;
 }
 
 
