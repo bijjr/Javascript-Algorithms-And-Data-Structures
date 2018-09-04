@@ -2,19 +2,25 @@
 
 
 //initial solution
-// function confirmEnding(str, target) {
-//   let search = str.split('');
-//
-//   for (var words in search) {
-//       let spliced = search
-//       .splice(-target.length)
-//       .join('')
-//
-//       return spliced == target ? true : false;
-//   }
-// }
+function confirmEnding(str, target) {
+  //turns strin into an array to be iterated over
+  let search = str.split('')
 
-//substring solution (more optimal)
+  for (var words in search) {
+      //using splice to remove the target
+      // target length == 4
+      //splice begins removing from -4 index (from the end) through the rest of the string/array
+      let spliced = search
+      .splice(-target.length)
+      //joins them back together to return a string
+      .join('')
+
+      //ternary operator
+      return spliced == target ? true : false;
+  }
+}
+
+// substring solution (optimal)
 function confirmEnding(str, target) {
   return (str.substr(-target.length) === target) ? true : false;
 }
