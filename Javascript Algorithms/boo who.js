@@ -3,7 +3,7 @@
 
 // Initial solution
 function booWho(bool) {
-  return typeof bool == typeof true || false ? true : false;
+  return typeof bool == typeof true || false
   // bool == true ? true : bool == false ? true : false ;
 }
 
@@ -32,3 +32,7 @@ console.log(booWho("false"));
 
 
 // Optimal solution
+// 'typeof' returns a string 
+function booWho(bool) {
+  return typeof bool == 'boolean'
+}
