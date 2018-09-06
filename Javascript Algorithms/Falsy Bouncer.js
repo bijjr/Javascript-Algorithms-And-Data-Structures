@@ -1,11 +1,17 @@
 //Remove all falsy values from an array.
 
-function bouncer(arr) {
 
-  return arr.filter( (i) => {
-    return (i != false && i != undefined && Number.isNaN(i) != true);
+//Number.isNaN(object)
+
+//inital solutions
+function bouncer(arr) {
+  return arr.filter(i => {
+    return i;
   });
 }
+
+
+
 
 console.log(bouncer([7, "ate", "", false, 9]));
 //should return [7, "ate", 9].
