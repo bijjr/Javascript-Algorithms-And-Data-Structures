@@ -6,8 +6,21 @@
 
 // intial solution
 function titleCase(str) {
-  let arr = str.split('')
-  let str = arr.map(letter => )
+  return str.split(' ')
+  .map(i => {
+    return i.charAt(0).toUpperCase() +
+    i.substr(1).toLowerCase()
+  })
+  .join(' ');
 }
 
-titleCase("I'm a little tea pot");
+
+
+console.log(titleCase("I'm a little tea pot"));
+//titleCase("I'm a little tea pot") should return I'm A Little Tea Pot.
+
+console.log(titleCase("sHoRt AnD sToUt"));
+//Should return Short And Stout.
+
+console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
+//Should return Here Is My Handle Here Is My Spout.
