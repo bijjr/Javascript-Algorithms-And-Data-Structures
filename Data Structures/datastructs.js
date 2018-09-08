@@ -208,42 +208,96 @@ console.log(dimensions());
 ////
 ////
 
-let users = {
-  Alan: {
-    age: 27,
-    online: false
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: false
-  },
-  Ryan: {
-    age: 19,
-    online: true
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: false
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: false
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+//
+// function countOnline(obj) {
+//   // change code below this line
+//   let active = []
+//   for (let user in obj) {
+//   obj[user].online ? active.push(user) : false;
+//   }
+//   return active.length
+//   // change code above this line
+// }
+//
+// console.log(countOnline(users));
+
+////
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: false
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: false
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+//
+// function getArrayOfUsers(obj) {
+//   // change code below this line
+//   return Object.keys(obj);
+//   // change code above this line
+// }
+//
+// console.log(getArrayOfUsers(users));
+
+
+////
+
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
   }
 };
 
-function countOnline(obj) {
+function addFriend(userObj, friend) {
   // change code below this line
-  let active = []
-  for (let user in obj) {
-  obj[user].online ? active.push(user) : false;
-  }
-  return active.length
+  userObj.data.friends.push(friend)
+  return userObj.data.friends;
   // change code above this line
 }
 
-console.log(countOnline(users));
-
-////
-
-
-
-////
+console.log(addFriend(user, 'Pete'));
 
 ////
 
