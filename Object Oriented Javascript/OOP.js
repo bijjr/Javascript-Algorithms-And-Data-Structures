@@ -26,6 +26,15 @@ function Dog() {
   this.color = "brown";
   this.numLegs = 4;
 }
-// Add your code below this line
 
 let hound = new Dog();
+
+//Extend constructors to receive arguements
+
+function Dog(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 4;
+}
+
+let terrier = new Dog('Robyn','Red')
