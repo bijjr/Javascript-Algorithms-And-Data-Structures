@@ -110,10 +110,43 @@ function Dog(name) {
 }
 
 function joinDogFraternity(candidate) {
-  if (canidate.construcor === Dog) {
+  if (candidate.construtcor === Dog) {
     return true;
   } else {
     return false;
   }
 
 }
+
+
+//Change prototype to a new objects
+
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype = {
+  numLegs: 2,
+  eat: function() {
+    console.log('nom','noom','nom');
+  },
+  describe: function() {
+    console.log('My name is ' + this.name);
+  }
+};
+
+//Reset an inherited Constructor property
+
+function Animal() { }
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+let duck = new Bird();
+let beagle = new Dog();
