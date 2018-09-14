@@ -204,3 +204,10 @@ let ducko = new Bird();
 // console.log(ducko.weight());
 
 console.log(ducko.getWeight());
+
+
+//Immediately Invoked Function expression
+
+(function () {
+  console.log("A cozy nest is ready");
+})();
