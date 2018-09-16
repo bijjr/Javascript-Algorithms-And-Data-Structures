@@ -593,16 +593,27 @@ var watchList = [
 ];
 
 
-
-
+var nolanFilms = watchList.filter((x) => x.Director === 'Christopher Nolan');
 
 var averageRating = watchList
-//filters each item in the watchList array whose 'Director' key == Chris Nolan
-.filter((item) => item['Director'] === 'Christopher Nolan')
-//Turns each rating string into a number
-.map((item) => Number(item['imdbRating']))
-//adds each item in the array and divides it by (4) the length of an array whose elements 'Director' property =  Chris Nolan
-.reduce((acc, val) => acc + val) / watchList.filter((x) => x.Director === 'Christopher Nolan').length
-
+.filter((item) => item.Director === 'Christopher Nolan')
+.reduce((acc, item) => acc + Number(item.imdbRating), 0) / nolanFilms.length
 
 console.log(averageRating);
+
+
+// var nolanFilms = watchList.filter((x) => x.Director === 'Christopher Nolan');
+//
+// var averageRating = watchList
+// //filters each item in the watchList array whose 'Director' key == Chris Nolan
+// .filter((item) => item.Director === 'Christopher Nolan')
+// //Turns each rating string into a number
+// // .map((item) => Number(item['imdbRating']))
+// //adds each item in the array and divides it by (4) the length of an array whose elements 'Director' property =  Chris Nolan
+// .reduce((acc, item) => acc + Number(item.imdbRating), 0) / nolanFilms.length
+//
+// // .reduce((sum, nolanMovies) => {
+// //     return (sum + parseFloat(nolanMovies.imdbRating));
+// //     },0)
+//
+// console.log(averageRating);
