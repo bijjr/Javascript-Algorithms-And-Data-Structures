@@ -593,10 +593,10 @@ var watchList = [
 ];
 
 
-var nolanFilms = watchList.filter((x) => x.Director === 'Christopher Nolan');
+var nolanFilms = watchList.filter(x => x.Director.startsWith('Chris'));
 
 var averageRating = watchList
-.filter((item) => item.Director === 'Christopher Nolan')
+.filter(item => item.Director.startsWith('Chris'))
 .reduce((acc, item) => acc + Number(item.imdbRating), 0) / nolanFilms.length
 
 console.log(averageRating);
