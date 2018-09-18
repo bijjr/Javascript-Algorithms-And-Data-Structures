@@ -618,11 +618,23 @@ console.log(averageRating);
 //
 // console.log(averageRating);
 
+//Return a Sorted Array Without Changing the Original Array
+
 var globalArray = [5, 6, 3, 2, 9];
 function nonMutatingSort(arr) {
   // Add your code below this line
-  return arr.sort();
+  let arr1 = [];
+  return arr1.concat(arr).sort();
 
-  // Add your code above this line
 }
-console.log(nonMutatingSort(globalArray));
+nonMutatingSort(globalArray);
+
+
+//Split a String into an Array Using the split Method
+
+function splitify(str) {
+  let arr = str.split(/\W/)
+  return arr
+}
+
+console.log(splitify("Hello World,I-am code"));
