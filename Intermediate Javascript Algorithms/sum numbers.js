@@ -1,6 +1,6 @@
 // Sum All Numbers in a Range
 
-
+console.time('imperative')
 function sumAll(arr) {
   let low = Math.min(...arr);
   let high = Math.max(...arr);
@@ -11,6 +11,17 @@ function sumAll(arr) {
   }
   return sum
 };
+console.timeEnd('imperative')
+
+
+
+console.time('arithmetic progression formula')
+function sumAll(arr) {
+  let sum = (Math.max(...arr) - Math.min(...arr) + 1) * (Math.min(...arr) + Math.max(...arr)) / 2;
+  return sum
+};
+console.timeEnd('arithmetic progression formula')
+
 
 console.log(sumAll([1, 4]));
 // should return 10.
