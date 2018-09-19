@@ -4,7 +4,8 @@
 // You have to use the arguments object.
 
 function destroyer(arr) {
-  return arr;
+  let args = Array.prototype.slice.call(arguments)
+  return arr.filter(item => !args.includes(item))
 }
 
 console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
