@@ -638,3 +638,11 @@ function splitify(str) {
 }
 
 console.log(splitify("Hello World,I-am code"));
+
+//Combine an array into a string Method
+
+function sentensify(str) {
+  let arr = str.split(/\W/).join(' ')
+  return arr
+}
+console.log(sentensify("May-the-force-be-with-you"));
