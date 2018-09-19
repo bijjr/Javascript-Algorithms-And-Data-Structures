@@ -646,3 +646,40 @@ function sentensify(str) {
   return arr
 }
 console.log(sentensify("May-the-force-be-with-you"));
+
+
+
+// The output is a string with the spaces between words replaced by a hyphen (-)
+// The output should be all lower-cased letters
+// The output should not have any spaces
+
+//Convert Strings to URL Slugs
+
+// the global variable
+var globalTitle = "Winter Is Coming";
+
+function urlSlug(title) {
+
+  return title.split(/\W/)
+  .filter((obj) => {
+     return obj !== '';
+   })
+   .join('-')
+   .toLowerCase();
+
+ // return title.split(/\W/).join('-').toLowerCase();
+}
+
+var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
+console.log(winterComing);
+
+
+//Use the every method to check if every element in arr is positive. The function should return a Boolean value.
+
+function checkPositive(arr) {
+  return arr.every(function(val) {
+     return val > 0;
+  });
+};
+
+console.log(checkPositive([1, 2, 3, -4, 5]));
