@@ -4,18 +4,24 @@
 
 
 function diffArray(arr1, arr2) {
-  var newArr = [];
+  let newArr = arr1
+  .concat(arr2)
+  .filter((item) => arr1.indexOf(item) == -1 || arr2.indexOf(item) == -1)
 
-  for (var i in arr1) {
-    if (arr2.indexOf(arr1[i]) == -1) {
-        newArr.push(arr1[i]);
-      }
-  }
-  for (var i in arr2) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-        newArr.push(arr2[i]);
-      }
-    }
+
+  // .filter((item) => !arr1.includes(item) || !arr2.includes(item))
+
+  
+  // for (var i in arr1) {
+  //   if (arr2.indexOf(arr1[i]) == -1) {
+  //       newArr.push(arr1[i]);
+  //     }
+  // }
+  // for (var i in arr2) {
+  //   if (arr1.indexOf(arr2[i]) == -1) {
+  //       newArr.push(arr2[i]);
+  //     }
+  //   }
   return newArr
   }
 
