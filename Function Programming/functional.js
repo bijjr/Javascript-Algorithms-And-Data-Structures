@@ -683,3 +683,25 @@ function checkPositive(arr) {
 };
 
 console.log(checkPositive([1, 2, 3, -4, 5]));
+
+//Any value
+
+// function checkPositive(arr) {
+//   return arr.some(function(val) {
+//      return val > 0;
+//   });
+// };
+//
+// console.log(checkPositive([1, 2, 3, -4, 5]));
+
+//Introduction to Currying and Partial Application
+
+function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    }
+  }
+}
+// add(10)(20)(30);
+console.log(add(10)(20)(30));
