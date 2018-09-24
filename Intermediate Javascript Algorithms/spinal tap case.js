@@ -9,7 +9,6 @@ function spinalCase(str) {
   return str.replace(regex, "-").toLowerCase();
 }
 
-
 console.log(spinalCase("This Is Spinal Tap"));
 // should return "this-is-spinal-tap".
 console.log(spinalCase("thisIsSpinalTap"));
